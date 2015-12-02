@@ -2,60 +2,51 @@
 
 namespace AppBundle\Entity;
 
-class Trainers extends PeopleAbstract{
-    protected $id;
-    protected $idTeam;
+use Doctrine\ORM\Mapping as ORM;
 
+/**
+ * Trainers
+ *
+ * @ORM\Table(name="trainers")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\TrainersRepository")
+ */
+class Trainers
+{
     /**
-     * @param $name
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
+    private $id;
 
     /**
-     * @param $secondName
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255)
      */
-    public function setSecondName($secondName)
-    {
-        $this->secondName = $secondName;
-    }
+    private $name;
 
     /**
-     * @param $age
+     * @var string
+     *
+     * @ORM\Column(name="secondName", type="string", length=255)
      */
-    public function setAge($age)
-    {
-        $this->age = $age;
-    }
+    private $secondName;
 
     /**
-     * @return mixed
+     * @var int
+     *
+     * @ORM\Column(name="age", type="integer")
      */
-    public function getName()
-    {
-        return $this->name;
-    }
+    private $age;
+
 
     /**
-     * @return mixed
-     */
-    public function getSecondName()
-    {
-        return $this->secondName;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAge()
-    {
-        return $this->age;
-    }
-
-    /**
-     * @return mixed
+     * Get id
+     *
+     * @return int
      */
     public function getId()
     {
@@ -63,28 +54,75 @@ class Trainers extends PeopleAbstract{
     }
 
     /**
-     * @param mixed $id
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Trainers
      */
-    public function setId($id)
+    public function setName($name)
     {
-        $this->id = $id;
+        $this->name = $name;
+
+        return $this;
     }
 
     /**
-     * @return mixed
+     * Get name
+     *
+     * @return string
      */
-    public function getIdTeam()
+    public function getName()
     {
-        return $this->idTeam;
+        return $this->name;
     }
 
     /**
-     * @param mixed $idTeam
+     * Set secondName
+     *
+     * @param string $secondName
+     *
+     * @return Trainers
      */
-    public function setIdTeam($idTeam)
+    public function setSecondName($secondName)
     {
-        $this->idTeam = $idTeam;
+        $this->secondName = $secondName;
+
+        return $this;
     }
 
+    /**
+     * Get secondName
+     *
+     * @return string
+     */
+    public function getSecondName()
+    {
+        return $this->secondName;
+    }
 
+    /**
+     * Set age
+     *
+     * @param integer $age
+     *
+     * @return Trainers
+     */
+    public function setAge($age)
+    {
+        $this->age = $age;
+
+        return $this;
+    }
+
+    /**
+     * Get age
+     *
+     * @return int
+     */
+    public function getAge()
+    {
+        return $this->age;
+    }
 }
+

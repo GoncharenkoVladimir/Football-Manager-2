@@ -2,39 +2,68 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Team
+ *
+ * @ORM\Table(name="team")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\TeamRepository")
+ */
 class Team
 {
-    protected $nameTeam;
-    protected $teamPlayer;
-    protected $idTrainer;
-    protected $idTeam;
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
 
     /**
-     * @return mixed
+     * @var int
+     *
+     * @ORM\Column(name="idTrainer", type="integer", unique=true)
      */
-    public function getNameTeam()
+    private $idTrainer;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="idCountry", type="integer", unique=true)
+     */
+    private $idCountry;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
     {
-        return $this->nameTeam;
+        return $this->id;
     }
 
     /**
-     * @param mixed $nameTeam
+     * Set idTrainer
+     *
+     * @param integer $idTrainer
+     *
+     * @return Team
      */
-    public function setNameTeam($nameTeam)
+    public function setIdTrainer($idTrainer)
     {
-        $this->nameTeam = $nameTeam;
+        $this->idTrainer = $idTrainer;
+
+        return $this;
     }
 
     /**
-     * @param mixed $teamPlayer
-     */
-    public function setTeamPlayer($teamPlayer)
-    {
-        $this->teamPlayer = $teamPlayer;
-    }
-
-    /**
-     * @return mixed
+     * Get idTrainer
+     *
+     * @return int
      */
     public function getIdTrainer()
     {
@@ -42,35 +71,27 @@ class Team
     }
 
     /**
-     * @param mixed $idTrainer
+     * Set idCountry
+     *
+     * @param integer $idCountry
+     *
+     * @return Team
      */
-    public function setIdTrainer($idTrainer)
+    public function setIdCountry($idCountry)
     {
-        $this->idTrainer = $idTrainer;
+        $this->idCountry = $idCountry;
+
+        return $this;
     }
 
     /**
-     * @return mixed
+     * Get idCountry
+     *
+     * @return int
      */
-    public function getIdTeam()
+    public function getIdCountry()
     {
-        return $this->idTeam;
+        return $this->idCountry;
     }
-
-    /**
-     * @param mixed $idTeam
-     */
-    public function setIdTeam($idTeam)
-    {
-        $this->idTeam = $idTeam;
-    }
-
-    /**
-     * @return array
-     */
-    public function getTeamPlayer()
-    {
-        return $this->teamPlayer;
-    }
-
 }
+
