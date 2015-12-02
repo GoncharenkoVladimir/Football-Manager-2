@@ -15,7 +15,7 @@ class Countries
     /**
      * @var int
      *
-     * @ORM\Column(name="id", type="integer")
+     * @ORM\Column(type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
@@ -24,21 +24,21 @@ class Countries
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255, unique=true)
+     * @ORM\Column(type="string", length=255, unique=true)
      */
     private $name;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="capital", type="string", length=255, unique=true)
+     * @ORM\Column(type="string", length=255, unique=true)
      */
     private $capital;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="population", type="integer")
+     * @ORM\Column(type="integer")
      */
     private $population;
 

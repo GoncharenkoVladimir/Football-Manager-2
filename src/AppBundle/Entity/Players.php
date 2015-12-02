@@ -15,7 +15,7 @@ class Players
     /**
      * @var int
      *
-     * @ORM\Column(name="id", type="integer")
+     * @ORM\Column(type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
@@ -24,42 +24,42 @@ class Players
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(type="string", length=255)
      */
     private $name;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="secondName", type="string", length=255)
+     * @ORM\Column(type="string", length=255)
      */
     private $secondName;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="age", type="integer")
+     * @ORM\Column(type="integer")
      */
     private $age;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="number", type="integer")
+     * @ORM\Column(type="integer")
      */
     private $number;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="idTeam", type="integer")
+     * @ORM\Column(type="integer")
      */
     private $idTeam;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="position", type="string", length=255)
+     * @ORM\Column(type="string", length=255)
      */
     private $position;
 

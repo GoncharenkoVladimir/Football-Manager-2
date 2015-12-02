@@ -15,7 +15,7 @@ class Team
     /**
      * @var int
      *
-     * @ORM\Column(name="id", type="integer")
+     * @ORM\Column(type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
@@ -24,14 +24,14 @@ class Team
     /**
      * @var int
      *
-     * @ORM\Column(name="idTrainer", type="integer", unique=true)
+     * @ORM\Column(type="integer", unique=true)
      */
     private $idTrainer;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="idCountry", type="integer", unique=true)
+     * @ORM\Column(type="integer", unique=true)
      */
     private $idCountry;
 

@@ -15,7 +15,7 @@ class Trainers
     /**
      * @var int
      *
-     * @ORM\Column(name="id", type="integer")
+     * @ORM\Column(type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
@@ -24,21 +24,21 @@ class Trainers
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(type="string", length=255)
      */
     private $name;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="secondName", type="string", length=255)
+     * @ORM\Column(type="string", length=255)
      */
     private $secondName;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="age", type="integer")
+     * @ORM\Column(type="integer")
      */
     private $age;
 
