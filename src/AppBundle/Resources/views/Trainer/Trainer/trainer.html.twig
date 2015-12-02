@@ -1,0 +1,22 @@
+{% extends 'AppBundle::main.html.twig' %}
+
+{% block title %}Trainer page!!!{% endblock %}
+
+{% block content %}
+    <div class="content trainer-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-lg-3">
+                    <div class="foto-trainer"></div>
+                </div>
+                <div class="col-md-9 col-lg-9">
+                    <ul class="trainer-info">
+                        <li>Имя: {{ trainer.name }} {{ trainer.secondName }} </li>
+                        <li>Возраст: {{ trainer.age }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+{% block titlepage %}<h3 class="text-center">{{ trainer.name }} {{ trainer.secondName}}</h3>{% endblock titlepage %}

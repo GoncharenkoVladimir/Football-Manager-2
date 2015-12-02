@@ -1,0 +1,24 @@
+{% extends 'AppBundle::main.html.twig' %}
+
+{% block title %}Player page!!!{% endblock %}
+
+{% block content %}
+    <div class="content player-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-lg-3">
+                    <div class="foto-player"></div>
+                </div>
+                <div class="col-md-9 col-lg-9">
+                    <ul class="player-info">
+                        <li>Имя: {{ player.name }} {{ player.secondName }} </li>
+                        <li>Страна: {{ player.country }}</li>
+                        <li>Номер: {{ player.number }}</li>
+                        <li>Возраст: {{ player.age }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+{% block titlepage %}<h3 class="text-center">{{ player.name }} {{ player.secondName }}</h3>{% endblock titlepage %}
