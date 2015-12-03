@@ -7,16 +7,19 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use AppBundle\Controller\Country;
+use AppBundle\Entity\Countries;
 
 class CountryController extends Controller
 {
     /**
-     * @Route("/country", name="country")
+     * @Route("/country/{id}", name="country")
      * @Template()
+     * @param Int $id
+     * @return array
      */
-    public function countryAction()
+    public function countryAction($id)
     {
-
+        $country = $this->getDoctrine()->getRepository('AppBundle:Countries')->find($id);
+        return ['country' => $country];
     }
 }

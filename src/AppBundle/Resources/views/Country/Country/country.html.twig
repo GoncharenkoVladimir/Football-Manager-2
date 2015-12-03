@@ -2,5 +2,22 @@
 
 {% block title %}Country page!!!{% endblock %}
 
-{% block body %}
-{% endblock %}
+{% block content %}
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-lg-3">
+                    <div class="flag-country"></div>
+                </div>
+                <div class="col-md-9 col-lg-9">
+                    <ul class="country-info">
+                        <li>Страна: {{ country.name }} </li>
+                        <li>Столица: {{ country.capital }}</li>
+                        <li>Население: {{ country.population }} чел.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+{% block titlepage %}<h3 class="text-center">{{ country.name }}</h3>{% endblock titlepage %}

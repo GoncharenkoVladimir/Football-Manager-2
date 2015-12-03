@@ -17,5 +17,9 @@ class MainController extends Controller
      */
     public function homeAction()
     {
+        $team = $this->getDoctrine();
+        $teams = $team->getRepository('AppBundle:Team')->findAll();
+
+        return ['teams' => $teams];
     }
 }

@@ -42,6 +42,10 @@ class Countries
      */
     private $population;
 
+    /**
+     * @ORM\OneToOne(targetEntity="Team", inversedBy="country")
+     */
+    private $team;
 
     /**
      * Get id
@@ -123,6 +127,30 @@ class Countries
     public function getPopulation()
     {
         return $this->population;
+    }
+
+    /**
+     * Set team
+     *
+     * @param Team $team
+     * @return Countries
+     *
+     */
+    public function setTeam($team)
+    {
+        $this->team = $team;
+
+        return $this;
+    }
+
+    /**
+     * Get team
+     *
+     * @return Team
+     */
+    public function getTeam()
+    {
+        return $this->team;
     }
 }
 

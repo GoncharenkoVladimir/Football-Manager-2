@@ -50,18 +50,16 @@ class Players
     private $number;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(type="integer")
-     */
-    private $idTeam;
-
-    /**
      * @var string
      *
      * @ORM\Column(type="string", length=255)
      */
     private $position;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Team", inversedBy="players")
+     */
+    private $team;
 
 
     /**
@@ -171,30 +169,6 @@ class Players
     }
 
     /**
-     * Set idTeam
-     *
-     * @param integer $idTeam
-     *
-     * @return Players
-     */
-    public function setIdTeam($idTeam)
-    {
-        $this->idTeam = $idTeam;
-
-        return $this;
-    }
-
-    /**
-     * Get idTeam
-     *
-     * @return int
-     */
-    public function getIdTeam()
-    {
-        return $this->idTeam;
-    }
-
-    /**
      * Set position
      *
      * @param string $position
@@ -217,5 +191,29 @@ class Players
     {
         return $this->position;
     }
+
+    /**
+     *
+     * Get team
+     *
+     * @return Team
+     */
+    public function getTeam()
+    {
+        return $this->team;
+    }
+
+    /**
+     * Set team
+     *
+     * @param Team $team
+     * @return Players
+     */
+    public function setTeam($team)
+    {
+        $this->team = $team;
+    }
+
+
 }
 

@@ -42,6 +42,10 @@ class Trainers
      */
     private $age;
 
+    /**
+     * @ORM\OneToOne(targetEntity="Team", inversedBy="trainer")
+     */
+    private $team;
 
     /**
      * Get id
@@ -123,6 +127,30 @@ class Trainers
     public function getAge()
     {
         return $this->age;
+    }
+
+    /**
+     * Set team
+     *
+     * @param Team $team
+     * @return Trainers
+     *
+     */
+    public function setTeam($team)
+    {
+        $this->team = $team;
+
+        return $this;
+    }
+
+    /**
+     * Get team
+     *
+     * @return Team
+     */
+    public function getTeam()
+    {
+        return $this->team;
     }
 }
 

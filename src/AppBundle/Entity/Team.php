@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Team
@@ -22,19 +23,25 @@ class Team
     private $id;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(type="integer", unique=true)
+     * @ORM\OneToOne(targetEntity="Trainers", mappedBy="team")
      */
-    private $idTrainer;
+    private $trainer;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(type="integer", unique=true)
+     * @ORM\OneToOne(targetEntity="Countries", mappedBy="team")
      */
-    private $idCountry;
+    private $country;
 
+
+    /**
+     * @ORM\OneToMany(targetEntity="Players", mappedBy="team")
+     */
+    private $players;
+
+    public function __construct()
+    {
+        $this->players = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -47,51 +54,113 @@ class Team
     }
 
     /**
-     * Set idTrainer
+     * Set country
      *
-     * @param integer $idTrainer
+     * @param Countries $country
      *
      * @return Team
      */
-    public function setIdTrainer($idTrainer)
+    public function setCountry(Countries $country)
     {
-        $this->idTrainer = $idTrainer;
+
+        $this->country = $country;
+        if ($country) {
+            $country->setTeam($this);
+        }
 
         return $this;
     }
 
     /**
-     * Get idTrainer
+     * Get country
      *
-     * @return int
+     * @return Countries
      */
-    public function getIdTrainer()
+    public function getCountry()
     {
-        return $this->idTrainer;
+        return $this->country;
     }
 
     /**
-     * Set idCountry
+     * Set trainers
      *
-     * @param integer $idCountry
+     * @param Trainers $trainer
      *
      * @return Team
      */
-    public function setIdCountry($idCountry)
+    public function setTrainer($trainer)
     {
-        $this->idCountry = $idCountry;
+
+        $this->trainer = $trainer;
+        if ($trainer) {
+            $trainer->setTeam($this);
+        }
 
         return $this;
     }
 
     /**
-     * Get idCountry
+     * Get trainer
      *
-     * @return int
+     * @return Trainers
      */
-    public function getIdCountry()
+    public function getTrainer()
     {
-        return $this->idCountry;
+        return $this->trainer;
+    }
+
+    /**
+     * Set players
+     *
+     * @param Players $players
+     *
+     * @return Team
+     */
+    public function setPlayers($players)
+    {
+
+        $this->country = $players;
+        if ($players) {
+            $players->setTeam($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * Get players
+     *
+     * @return Players
+     */
+    public function getPlayers()
+    {
+        return $this->players;
+    }
+
+    /**
+     * Add player
+     *
+     * @param Players $player
+     *
+     * @return Team
+     */
+    public function addPlayer(Players $player)
+    {
+        $this->players[] = $player;
+        if ($player) {
+            $player->setTeam($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * Remove player
+     *
+     * @param Players $player
+     */
+    public function removePlayer(Players $player)
+    {
+        $this->players->removeElement($player);
     }
 }
-

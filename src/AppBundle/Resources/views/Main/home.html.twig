@@ -7,7 +7,7 @@
             <div class="container">
                 <h2 id="title">Евро-2016. Отбор.</h2>
                 <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="col-lg-12">
                         <h4 class="title-table">Евро-2016. Отбор. Группа A</h4>
                         <table>
                             <tr>
@@ -20,170 +20,11 @@
                                 <th>П</th>
                                 <th>О</th>
                             </tr>
-                            {% for team in teames %}
+                            {% for team in teams %}
                                 <tr>
                                     <td>
-                                        <a href="{{ path('team', {'id': team.idTeam}) }}">
-                                            <i class="flag country{{ team.idTeam }}"></i>{{ team.nameTeam }}
-                                        </a>
-                                    </td>
-                                    <td>10</td>
-                                    <td>{{ random(10) }}</td>
-                                    <td>{{ random(10) }}</td>
-                                    <td>{{ random(10) }}</td>
-                                    <td>{{ random(30) }}</td>
-                                    <td>{{ random(30) }}</td>
-                                    <td>{{ random(30) }}</td>
-                                </tr>
-                            {% endfor %}
-                        </table>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <h4 class="title-table">Евро-2016. Отбор. Группа B</h4>
-                        <table>
-                            <tr>
-                                <th></th>
-                                <th>И</th>
-                                <th>В</th>
-                                <th>Н</th>
-                                <th>П</th>
-                                <th>З</th>
-                                <th>П</th>
-                                <th>О</th>
-                            </tr>
-                            {% for team in teames %}
-                                <tr>
-                                    <td>
-                                        <a href="{{ path('team', {'id': team.idTeam}) }}">
-                                            <i class="flag country{{ team.idTeam }}"></i>{{ team.nameTeam }}
-                                        </a>
-                                    </td>
-                                    <td>10</td>
-                                    <td>{{ random(10) }}</td>
-                                    <td>{{ random(10) }}</td>
-                                    <td>{{ random(10) }}</td>
-                                    <td>{{ random(30) }}</td>
-                                    <td>{{ random(30) }}</td>
-                                    <td>{{ random(30) }}</td>
-                                </tr>
-                            {% endfor %}
-                        </table>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <h4 class="title-table">Евро-2016. Отбор. Группа C</h4>
-                        <table>
-                            <tr>
-                                <th></th>
-                                <th>И</th>
-                                <th>В</th>
-                                <th>Н</th>
-                                <th>П</th>
-                                <th>З</th>
-                                <th>П</th>
-                                <th>О</th>
-                            </tr>
-                            {% for team in teames %}
-                                <tr>
-                                    <td>
-                                        <a href="{{ path('team', {'id': team.idTeam}) }}">
-                                            <i class="flag country{{ team.idTeam }}"></i>{{ team.nameTeam }}
-                                        </a>
-                                    </td>
-                                    <td>10</td>
-                                    <td>{{ random(10) }}</td>
-                                    <td>{{ random(10) }}</td>
-                                    <td>{{ random(10) }}</td>
-                                    <td>{{ random(30) }}</td>
-                                    <td>{{ random(30) }}</td>
-                                    <td>{{ random(30) }}</td>
-                                </tr>
-                            {% endfor %}
-                        </table>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <h4 class="title-table">Евро-2016. Отбор. Группа D</h4>
-                        <table>
-                            <tr>
-                                <th></th>
-                                <th>И</th>
-                                <th>В</th>
-                                <th>Н</th>
-                                <th>П</th>
-                                <th>З</th>
-                                <th>П</th>
-                                <th>О</th>
-                            </tr>
-                            {% for team in teames %}
-                                <tr>
-                                    <td>
-                                        <a href="{{ path('team', {'id': team.idTeam}) }}">
-                                            <i class="flag country{{ team.idTeam }}"></i>{{ team.nameTeam }}
-                                        </a>
-                                    </td>
-                                    <td>10</td>
-                                    <td>{{ random(10) }}</td>
-                                    <td>{{ random(10) }}</td>
-                                    <td>{{ random(10) }}</td>
-                                    <td>{{ random(30) }}</td>
-                                    <td>{{ random(30) }}</td>
-                                    <td>{{ random(30) }}</td>
-                                </tr>
-                            {% endfor %}
-                        </table>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <h4 class="title-table">Евро-2016. Отбор. Группа E</h4>
-                        <table>
-                            <tr>
-                                <th></th>
-                                <th>И</th>
-                                <th>В</th>
-                                <th>Н</th>
-                                <th>П</th>
-                                <th>З</th>
-                                <th>П</th>
-                                <th>О</th>
-                            </tr>
-                            {% for team in teames %}
-                                <tr>
-                                    <td>
-                                        <a href="{{ path('team', {'id': team.idTeam}) }}">
-                                            <i class="flag country{{ team.idTeam }}"></i>{{ team.nameTeam }}
-                                        </a>
-                                    </td>
-                                    <td>10</td>
-                                    <td>{{ random(10) }}</td>
-                                    <td>{{ random(10) }}</td>
-                                    <td>{{ random(10) }}</td>
-                                    <td>{{ random(30) }}</td>
-                                    <td>{{ random(30) }}</td>
-                                    <td>{{ random(30) }}</td>
-                                </tr>
-                            {% endfor %}
-                        </table>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <h4 class="title-table">Евро-2016. Отбор. Группа F</h4>
-                        <table>
-                            <tr>
-                                <th></th>
-                                <th>И</th>
-                                <th>В</th>
-                                <th>Н</th>
-                                <th>П</th>
-                                <th>З</th>
-                                <th>П</th>
-                                <th>О</th>
-                            </tr>
-                            {% for team in teames %}
-                                <tr>
-                                    <td>
-                                        <a href="{{ path('team', {'id': team.idTeam}) }}">
-                                            <i class="flag country{{ team.idTeam }}"></i>{{ team.nameTeam }}
+                                        <a href="{{ path('team', {'id': team.id}) }}">
+                                            <i class="flag country{{ team.country.id }}"></i>{{ team.country.name }}
                                         </a>
                                     </td>
                                     <td>10</td>
