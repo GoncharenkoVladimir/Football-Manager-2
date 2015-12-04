@@ -8,7 +8,7 @@ class CountryControllerTest extends WebTestCase
     public function testIndex()
     {
         $client = static::createClient();
-        $crawler = $client->request('GET', '/player/1');
+        $crawler = $client->request('GET', '/country/1');
         $this->assertContains('Украина', $crawler->filter('.baner h3')->text());
     }
 }
