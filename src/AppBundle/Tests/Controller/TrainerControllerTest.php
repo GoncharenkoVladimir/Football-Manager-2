@@ -9,6 +9,6 @@ class TrainerControllerTest extends WebTestCase
     {
         $client = static::createClient();
         $crawler = $client->request('GET', '/trainer/1');
-        $this->assertContains('Ivan Ivanov', $crawler->filter('.baner h3')->text());
+        $this->assertContains('Name1 SecondName1', $crawler->filter('.baner h3')->text());
     }
 }

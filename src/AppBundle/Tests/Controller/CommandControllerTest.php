@@ -9,6 +9,6 @@ class CommandControllerTest extends WebTestCase
     {
         $client = static::createClient();
         $crawler = $client->request('GET', '/team/1');
-        $this->assertContains('Сборная страны Чехия', $crawler->filter('.baner h3')->text());
+        $this->assertContains('Сборная страны Украина', $crawler->filter('.baner h3')->text());
     }
 }
