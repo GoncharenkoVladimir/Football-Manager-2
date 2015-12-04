@@ -1,4 +1,2 @@
-Football Manager
+Football Manager[![Build Status](https://travis-ci.org/GoncharenkoVladimir/Football-Manager-2.svg)](https://travis-ci.org/GoncharenkoVladimir/Football-Manager-2)
 ===============
-
-A Symfony project created on December 2, 2015, 9:33 am.
