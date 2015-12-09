@@ -1,0 +1,4 @@
+AppBundle\Entity\Trainer:
+    trainer{1..24}:
+        name: <name()>
+        age: <numberBetween(30,60)>

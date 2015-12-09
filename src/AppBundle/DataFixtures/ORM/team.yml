@@ -1,0 +1,5 @@
+AppBundle\Entity\Team:
+    team{1..24}:
+        players (unique): 12x @player*
+        trainer (unique): @trainer*
+        country (unique): @country*

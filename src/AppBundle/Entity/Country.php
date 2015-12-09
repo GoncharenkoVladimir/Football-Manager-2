@@ -5,12 +5,12 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Countries
+ * Country
  *
- * @ORM\Table(name="countries")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\CountriesRepository")
+ * @ORM\Table(name="country")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\CountryRepository")
  */
-class Countries
+class Country
 {
     /**
      * @var int
@@ -62,7 +62,7 @@ class Countries
      *
      * @param string $name
      *
-     * @return Countries
+     * @return Country
      */
     public function setName($name)
     {
@@ -86,7 +86,7 @@ class Countries
      *
      * @param string $capital
      *
-     * @return Countries
+     * @return Country
      */
     public function setCapital($capital)
     {
@@ -110,7 +110,7 @@ class Countries
      *
      * @param integer $population
      *
-     * @return Countries
+     * @return Country
      */
     public function setPopulation($population)
     {
@@ -133,7 +133,7 @@ class Countries
      * Set team
      *
      * @param Team $team
-     * @return Countries
+     * @return Country
      *
      */
     public function setTeam($team)

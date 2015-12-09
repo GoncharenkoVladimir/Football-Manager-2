@@ -23,18 +23,18 @@ class Team
     private $id;
 
     /**
-     * @ORM\OneToOne(targetEntity="Trainers", mappedBy="team")
+     * @ORM\OneToOne(targetEntity="Trainer", mappedBy="team")
      */
     private $trainer;
 
     /**
-     * @ORM\OneToOne(targetEntity="Countries", mappedBy="team")
+     * @ORM\OneToOne(targetEntity="Country", mappedBy="team")
      */
     private $country;
 
 
     /**
-     * @ORM\OneToMany(targetEntity="Players", mappedBy="team")
+     * @ORM\OneToMany(targetEntity="Player", mappedBy="team")
      */
     private $players;
 
@@ -56,11 +56,11 @@ class Team
     /**
      * Set country
      *
-     * @param Countries $country
+     * @param Country $country
      *
      * @return Team
      */
-    public function setCountry(Countries $country)
+    public function setCountry($country)
     {
 
         $this->country = $country;
@@ -74,7 +74,7 @@ class Team
     /**
      * Get country
      *
-     * @return Countries
+     * @return Country
      */
     public function getCountry()
     {
@@ -84,7 +84,7 @@ class Team
     /**
      * Set trainers
      *
-     * @param Trainers $trainer
+     * @param Trainer $trainer
      *
      * @return Team
      */
@@ -102,7 +102,7 @@ class Team
     /**
      * Get trainer
      *
-     * @return Trainers
+     * @return Trainer
      */
     public function getTrainer()
     {
@@ -112,14 +112,14 @@ class Team
     /**
      * Set players
      *
-     * @param Players $players
+     * @param Player $players
      *
      * @return Team
      */
     public function setPlayers($players)
     {
 
-        $this->country = $players;
+        $this->players = $players;
         if ($players) {
             $players->setTeam($this);
         }
@@ -130,7 +130,7 @@ class Team
     /**
      * Get players
      *
-     * @return Players
+     * @return Player
      */
     public function getPlayers()
     {
@@ -140,11 +140,11 @@ class Team
     /**
      * Add player
      *
-     * @param Players $player
+     * @param Player $player
      *
      * @return Team
      */
-    public function addPlayer(Players $player)
+    public function addPlayer($player)
     {
         $this->players[] = $player;
         if ($player) {
@@ -157,9 +157,9 @@ class Team
     /**
      * Remove player
      *
-     * @param Players $player
+     * @param Player $player
      */
-    public function removePlayer(Players $player)
+    public function removePlayer($player)
     {
         $this->players->removeElement($player);
     }

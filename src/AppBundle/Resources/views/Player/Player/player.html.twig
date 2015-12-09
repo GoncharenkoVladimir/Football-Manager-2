@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-md-9 col-lg-9">
                     <ul class="player-info">
-                        <li>Имя: {{ player.name }} {{ player.secondName }} </li>
+                        <li>Имя: {{ player.name }}</li>
                         <li>Страна: <a href="{{ path('country', {'id': player.team.country.id }) }}">{{ player.team.country.name }}</a></li>
                         <li>Номер: {{ player.number }}</li>
                         <li>Возраст: {{ player.age }}</li>
@@ -22,4 +22,4 @@
         </div>
     </div>
 {% endblock content %}
-{% block titlepage %}<h3 class="text-center">{{ player.name }} {{ player.secondName }}</h3>{% endblock titlepage %}
+{% block titlepage %}<h3 class="text-center">{{ player.name }}</h3>{% endblock titlepage %}

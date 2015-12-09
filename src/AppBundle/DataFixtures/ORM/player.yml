@@ -1,0 +1,6 @@
+AppBundle\Entity\Player:
+    player{1..288}:
+        name: <name()>
+        age: <numberBetween(20,40)>
+        position: <randomElement(["goalkeeper", "forward", "mlefielder", "defender"])>
+        number: <numberBetween(1,50)>

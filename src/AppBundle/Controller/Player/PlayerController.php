@@ -7,7 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use AppBundle\Entity\Players;
+use AppBundle\Entity\Player;
 
 class PlayerController extends Controller
 {
@@ -19,7 +19,7 @@ class PlayerController extends Controller
      */
     public function playerAction($id)
     {
-        $player = $this->getDoctrine()->getRepository('AppBundle:Players')->find($id);
+        $player = $this->getDoctrine()->getRepository('AppBundle:Player')->find($id);
         return ['player' => $player];
     }
 

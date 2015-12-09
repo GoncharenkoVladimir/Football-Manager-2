@@ -10,12 +10,12 @@
                     <h6 class="title-table">Состав команды</h6>
                     <ul class="team">
                         {% for value in team.players %}
-                            <li><a href="{{ path('player', {'id': value.id }) }}">{{ value.name }}. {{ value.secondName }}</a></li>
+                            <li><a href="{{ path('player', {'id': value.id }) }}">{{ value.name }}</a></li>
                         {% endfor %}
                     </ul>
                     <p>
                         <span>Тренер:
-                            <a href="{{ path('trainer', {'id': team.trainer.id}) }}">{{ team.trainer.name }} {{ team.trainer.secondName }}</a>
+                            <a href="{{ path('trainer', {'id': team.trainer.id}) }}">{{ team.trainer.name }}</a>
                         </span><br>
                         <span>Страна:
                             <a href="{{ path('country', {'id': team.country.id}) }}">{{ team.country.name }}</a>

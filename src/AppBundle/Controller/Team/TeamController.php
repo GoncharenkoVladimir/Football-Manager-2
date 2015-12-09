@@ -9,8 +9,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use AppBundle\Entity\Team;
-use AppBundle\Entity\Players;
-use AppBundle\Entity\Trainers;
 
 
 class TeamController extends Controller
