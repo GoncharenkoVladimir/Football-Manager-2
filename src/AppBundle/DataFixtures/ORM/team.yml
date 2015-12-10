@@ -1,5 +1,97 @@
 AppBundle\Entity\Team:
-    team{1..24}:
-        players (unique): 12x @player*
+    team1:
+        players: @player{1..12}
         trainer (unique): @trainer*
         country (unique): @country*
+    team2:
+            players: @player{13..24}
+            trainer (unique): @trainer*
+            country (unique): @country*
+    team3:
+        players: @player{25..36}
+        trainer (unique): @trainer*
+        country (unique): @country*
+    team4:
+            players: @player{37..48}
+            trainer (unique): @trainer*
+            country (unique): @country*
+    team5:
+        players: @player{49..60}
+        trainer (unique): @trainer*
+        country (unique): @country*
+    team6:
+            players: @player{61..72}
+            trainer (unique): @trainer*
+            country (unique): @country*
+    team7:
+        players: @player{73..84}
+        trainer (unique): @trainer*
+        country (unique): @country*
+    team8:
+            players: @player{85..96}
+            trainer (unique): @trainer*
+            country (unique): @country*
+    team9:
+        players: @player{97..108}
+        trainer (unique): @trainer*
+        country (unique): @country*
+    team10:
+            players: @player{109..120}
+            trainer (unique): @trainer*
+            country (unique): @country*
+    team11:
+        players: @player{121..132}
+        trainer (unique): @trainer*
+        country (unique): @country*
+    team12:
+            players: @player{133..144}
+            trainer (unique): @trainer*
+            country (unique): @country*
+    team13:
+        players: @player{145..156}
+        trainer (unique): @trainer*
+        country (unique): @country*
+    team14:
+            players: @player{157..168}
+            trainer (unique): @trainer*
+            country (unique): @country*
+    team15:
+        players: @player{169..180}
+        trainer (unique): @trainer*
+        country (unique): @country*
+    team16:
+            players: @player{181..192}
+            trainer (unique): @trainer*
+            country (unique): @country*
+    team17:
+        players: @player{193..204}
+        trainer (unique): @trainer*
+        country (unique): @country*
+    team18:
+            players: @player{205..216}
+            trainer (unique): @trainer*
+            country (unique): @country*
+    team19:
+        players: @player{217..228}
+        trainer (unique): @trainer*
+        country (unique): @country*
+    team20:
+            players: @player{229..240}
+            trainer (unique): @trainer*
+            country (unique): @country*
+    team21:
+        players: @player{241..252}
+        trainer (unique): @trainer*
+        country (unique): @country*
+    team22:
+            players: @player{253..264}
+            trainer (unique): @trainer*
+            country (unique): @country*
+    team23:
+        players: @player{265..276}
+        trainer (unique): @trainer*
+        country (unique): @country*
+    team24:
+            players: @player{277..288}
+            trainer (unique): @trainer*
+            country (unique): @country*

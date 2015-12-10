@@ -6,8 +6,6 @@ use Nelmio\Alice\Fixtures;
 
 class AppFixtures extends AbstractLoader
 {
-    // ...
-
     public function getFixtures()
     {
         return  array(
