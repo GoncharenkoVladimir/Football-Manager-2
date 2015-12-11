@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="player")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\PlayerRepository")
  */
-class Player
+class Player implements \JsonSerializable
 {
     /**
      * @var int
@@ -181,6 +181,24 @@ class Player
     public function setTeam($team)
     {
         $this->team = $team;
+    }
+
+    /**
+     * Specify data which should be serialized to JSON
+     * @link http://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     * @since 5.4.0
+     */
+    function jsonSerialize()
+    {
+        return [
+            'id' => $this->getId(),
+            'name' => $this->getName(),
+            'age' => $this->getAge(),
+            'number' => $this->getNumber(),
+            'position' => $this->getPosition(),
+        ];
     }
 }
 

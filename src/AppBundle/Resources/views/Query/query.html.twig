@@ -1,0 +1,30 @@
+{% extends 'AppBundle::main.html.twig' %}
+
+{% block title %}Query page!!!{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="count">
+                        {{ pagination.getTotalItemCount }}
+                    </div>
+                    <ul class="list-players">
+                        {% for values in pagination %}
+                            <li>
+                                Name: {{ values.name }}<br>
+                                Age: {{ values.age }}<br>
+                                Position: {{ values.position }}<br>
+                                <br>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <div id='more' style="display: none;color:#ccc"><h3>Loading...</h3></div>
+                    <div id='no-more' style="display: none;color:#ccc"><h3>No more results</h3></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+{% block titlepage %}<h3 class="text-center">List Player</h3>{% endblock titlepage %}

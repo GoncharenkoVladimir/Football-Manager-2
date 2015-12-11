@@ -5,7 +5,8 @@
     <title>{% block title %}Welcome!{% endblock %}</title>
     {% block stylesheets %}{% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    <script href="{{ asset('js/main.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/all.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
@@ -59,6 +60,7 @@
         </div>
     {% endblock footer %}
 {% endblock %}
-{% block javascripts %}{% endblock %}
+{% block javascripts %}
+{% endblock %}
 </body>
 </html>
