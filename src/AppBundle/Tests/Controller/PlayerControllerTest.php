@@ -10,8 +10,7 @@ class PlayerControllerTest extends TestBaseWeb
     {
         $client = static::createClient();
         $crawler = $client->request('GET', '/players/1');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertContains('Player:', $crawler->filter('.baner h3')->text());
+        $this->assertContains('Player1:', $crawler->filter('.baner h3')->text());
 
     }
 }
