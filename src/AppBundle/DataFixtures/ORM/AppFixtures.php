@@ -2,7 +2,7 @@
 
 namespace Hautelook\AliceBundle\Doctrine\DataFixtures;
 
-use Nelmio\Alice\Fixtures;
+use Hautelook\AliceBundle\Alice\DataFixtures\Fixtures;
 
 class AppFixtures extends AbstractLoader
 {
