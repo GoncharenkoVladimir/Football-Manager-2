@@ -1,14 +1,14 @@
 <?php
-namespace AppBundle\Tests\Controller;
+namespace AppBundle\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class PlayerControllerTest extends WebTestCase
+class PlayerControllerTest extends TestBaseWeb
 {
     public function testIndex()
     {
         $client = static::createClient();
         $crawler = $client->request('GET', '/player/1');
-        $this->assertContains('Name1 SecondName1', $crawler->filter('.baner h3')->text());
+        $this->assertContains('Player1', $crawler->filter('.baner h3')->text());
     }
 }

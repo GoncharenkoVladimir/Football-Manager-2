@@ -1,0 +1,13 @@
+AppBundle\Entity\Trainer:
+    trainer{1}:
+        name: "Trainer1"
+        age: 40
+    trainer{2}:
+        name: "Trainer2"
+        age: 42
+    trainer{3}:
+        name: "Trainer3"
+        age: 43
+    trainer{4}:
+        name: "Trainer4"
+        age: 44

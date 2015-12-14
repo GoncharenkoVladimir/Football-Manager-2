@@ -1,0 +1,17 @@
+AppBundle\Entity\Country:
+    country{1}:
+        name (unique): "Country1"
+        population: 1
+        capital (unique): "capital1"
+    country{2}:
+            name (unique): "Country2"
+            population: 2
+            capital (unique): "capital2"
+    country{3}:
+            name (unique): "Country3"
+            population: 3
+            capital (unique): "capital3"
+    country{4}:
+            name (unique): "Country4"
+            population: 4
+            capital (unique): "capital4"

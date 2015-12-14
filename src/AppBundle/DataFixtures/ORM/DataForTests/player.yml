@@ -1,0 +1,21 @@
+AppBundle\Entity\Player:
+    player{1}:
+            name: "Player1"
+            age: 20
+            position: "defender"
+            number: 1
+    player{2}:
+            name: "Player2"
+            age: 22
+            position: "goalkeeper"
+            number: 2
+    player{3}:
+            name: "Player3"
+            age: 23
+            position: "forward"
+            number: 3
+    player{4}:
+            name: "Player4"
+            age: 24
+            position: "mlefielder"
+            number: 4
