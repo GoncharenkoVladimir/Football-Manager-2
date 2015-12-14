@@ -2,23 +2,16 @@
 namespace AppBundle\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use AppBundle\Controller\Player;
 
 class PlayerControllerTest extends TestBaseWeb
 {
     public function testShow()
     {
-        $this->tearDown();
-        $this->setUp();
         $client = static::createClient();
-        $em = $client->getContainer()->get('doctrine.orm.entity_manager');
-        $slug = $em
-            ->getRepository('AppBundle:Player')
-            ->find(1);
-        $crawler = $client->request('GET', "/player/{$slug}");
+        $crawler = $client->request('GET', '/players/1');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertEquals(
-            1,
-            $crawler->filter('.baner h3')->count()
-        );
+        $this->assertContains('Player:', $crawler->filter('.baner h3')->text());
+
     }
 }
