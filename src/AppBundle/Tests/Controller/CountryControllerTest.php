@@ -7,6 +7,8 @@ class CountryControllerTest extends TestBaseWeb
 {
     public function testIndex()
     {
+        $this->tearDown();
+        $this->setUp();
         $client = static::createClient();
         $crawler = $client->request('GET', '/country/1');
         $this->assertContains('Country1', $crawler->filter('.baner h3')->text());

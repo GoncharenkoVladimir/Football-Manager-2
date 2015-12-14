@@ -1,9 +1,7 @@
 <?php
 
 namespace Hautelook\AliceBundle\Doctrine\DataFixtures;
-
-use Hautelook\AliceBundle\Doctrine\DataFixtures\LoaderInterface;
-
+use Hautelook\AliceBundle\Alice\DataFixtures\Fixtures;
 class AppFixtures extends AbstractLoader
 {
     /**
@@ -11,6 +9,7 @@ class AppFixtures extends AbstractLoader
      *
      * @return array<string>
      */
+
     public function getFixtures()
     {
         $env = $this->container->get('kernel')->getEnvironment();
