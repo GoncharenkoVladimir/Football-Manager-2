@@ -10,9 +10,9 @@ class TrainerControllerTest extends TestBaseWeb
     {
         $this->setUp();
 
-        $client = static::createClient();
-        $crawler = $client->request('GET', '/trainer/1');
-        $this->assertContains('Trainer1', $crawler->filter('.baner h3')->text());
+        $em = $this->client->getContainer()->get('doctrine.orm.entity_manager');
+        $trainer = $em->getRepository('AppBundle:Trainer')->find(1);
+        $this->assertContains('Trainer1', $trainer->getName());
 
         $this->tearDown();
     }

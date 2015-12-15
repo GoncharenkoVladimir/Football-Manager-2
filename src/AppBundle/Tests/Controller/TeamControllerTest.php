@@ -10,9 +10,9 @@ class TeamControllerTest extends TestBaseWeb
     {
         $this->setUp();
 
-        $client = static::createClient();
-        $crawler = $client->request('GET', '/team/1');
-        $this->assertContains('Сборная страны Country1', $crawler->filter('.baner h3')->text());
+        $em = $this->client->getContainer()->get('doctrine.orm.entity_manager');
+        $team = $em->getRepository('AppBundle:Team')->find(1);
+        $this->assertContains('Country1', $team->getCountry()->getName());
 
         $this->tearDown();
     }

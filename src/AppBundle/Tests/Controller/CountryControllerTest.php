@@ -10,9 +10,9 @@ class CountryControllerTest extends TestBaseWeb
     {
         $this->setUp();
 
-        $client = static::createClient();
-        $crawler = $client->request('GET', '/country/1');
-        $this->assertContains('Country1', $crawler->filter('.baner h3')->text());
+        $em = $this->client->getContainer()->get('doctrine.orm.entity_manager');
+        $country = $em->getRepository('AppBundle:Country')->find(1);
+        $this->assertContains('Country1', $country->getName());
 
         $this->tearDown();
     }
