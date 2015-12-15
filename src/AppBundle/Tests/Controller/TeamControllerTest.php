@@ -8,12 +8,12 @@ class TeamControllerTest extends TestBaseWeb
 {
     public function testIndex()
     {
-        /*$this->setUp();
+        $this->setUp();
 
         $em = $this->client->getContainer()->get('doctrine.orm.entity_manager');
         $team = $em->getRepository('AppBundle:Team')->find(1);
         $this->assertContains('Country1', $team->getCountry());
 
-        $this->tearDown();*/
+        $this->tearDown();
     }
 }
