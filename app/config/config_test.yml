@@ -17,7 +17,7 @@ swiftmailer:
 
 doctrine:
    dbal:
-       driver:   pdo_mysql
+       driver:   pdo_sqlite
        memory:   true
        charset:  UTF8
        mapping_types:
