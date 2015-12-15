@@ -2,6 +2,7 @@
 namespace AppBundle\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use AppBundle\Controller\Country;
 
 class CountryControllerTest extends TestBaseWeb
 {

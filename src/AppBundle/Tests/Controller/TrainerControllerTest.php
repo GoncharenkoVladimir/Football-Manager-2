@@ -2,6 +2,7 @@
 namespace AppBundle\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use AppBundle\Controller\Trainer;
 
 class TrainerControllerTest extends TestBaseWeb
 {

@@ -2,6 +2,7 @@
 namespace AppBundle\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use AppBundle\Controller\Team;
 
 class TeamControllerTest extends TestBaseWeb
 {
