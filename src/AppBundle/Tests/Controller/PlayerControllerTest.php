@@ -9,8 +9,9 @@ class PlayerControllerTest extends TestBaseWeb
 {
     public function testShow()
     {
-        $client = static::createClient();
-        $em = $client->getContainer()->get('doctrine.orm.entity_manager');
+        $this->tearDown();
+        $this->setUp();
+        $em = $this->client->getContainer()->get('doctrine.orm.entity_manager');
         $player = $em->getRepository('AppBundle:Player')->find(1);
         $this->assertContains('Player1', $player->getName());
     }
