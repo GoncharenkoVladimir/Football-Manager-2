@@ -1,17 +1,17 @@
 AppBundle\Entity\Team:
-    team1:
+    team{1}:
         players: @player{1}
         trainer (unique): @trainer{1}
         country (unique): @country{1}
-    team2:
+    team{2}:
             players: @player{2}
             trainer (unique): @trainer{2}
             country (unique): @country{2}
-    team3:
+    team{3}:
         players: @player{3}
         trainer (unique): @trainer{3}
         country (unique): @country{3}
-    team4:
+    team{4}:
             players: @player{4}
             trainer (unique): @trainer{4}
             country (unique): @country{4}

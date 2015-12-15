@@ -110,6 +110,24 @@ class Team
     }
 
     /**
+     * Set players
+     *
+     * @param Player $players
+     *
+     * @return Team
+     */
+    public function setPlayers($players)
+    {
+
+        $this->players = $players;
+        if ($players) {
+            $players->setTeam($this);
+        }
+
+        return $this;
+    }
+
+    /**
      * Get players
      *
      * @return Player
