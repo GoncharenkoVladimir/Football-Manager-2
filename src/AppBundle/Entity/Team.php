@@ -81,6 +81,10 @@ class Team
         return $this->country;
     }
 
+    public function __toString(){
+        return (string) $this->getCountry()->getName();
+    }
+
     /**
      * Set trainers
      *

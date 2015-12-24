@@ -173,15 +173,12 @@ class Player implements \JsonSerializable
     }
 
     /**
-     * Set team
-     *
-     * @param Team $team
-     * @return Player
+     * @return string
      */
-    public function setTeam($team)
-    {
-        $this->team = $team;
+    public function __toString() {
+        return (string) $this->getName();
     }
+
 
     /**
      * Specify data which should be serialized to JSON
